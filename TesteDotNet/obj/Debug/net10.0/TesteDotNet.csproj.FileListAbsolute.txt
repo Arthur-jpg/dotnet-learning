@@ -1,0 +1,14 @@
+/Users/arthurschiller/Documents/code/2026/dotNet/TesteDotNet/bin/Debug/net10.0/TesteDotNet
+/Users/arthurschiller/Documents/code/2026/dotNet/TesteDotNet/bin/Debug/net10.0/TesteDotNet.deps.json
+/Users/arthurschiller/Documents/code/2026/dotNet/TesteDotNet/bin/Debug/net10.0/TesteDotNet.runtimeconfig.json
+/Users/arthurschiller/Documents/code/2026/dotNet/TesteDotNet/bin/Debug/net10.0/TesteDotNet.dll
+/Users/arthurschiller/Documents/code/2026/dotNet/TesteDotNet/bin/Debug/net10.0/TesteDotNet.pdb
+/Users/arthurschiller/Documents/code/2026/dotNet/TesteDotNet/obj/Debug/net10.0/TesteDotNet.GeneratedMSBuildEditorConfig.editorconfig
+/Users/arthurschiller/Documents/code/2026/dotNet/TesteDotNet/obj/Debug/net10.0/TesteDotNet.AssemblyInfoInputs.cache
+/Users/arthurschiller/Documents/code/2026/dotNet/TesteDotNet/obj/Debug/net10.0/TesteDotNet.AssemblyInfo.cs
+/Users/arthurschiller/Documents/code/2026/dotNet/TesteDotNet/obj/Debug/net10.0/TesteDotNet.csproj.CoreCompileInputs.cache
+/Users/arthurschiller/Documents/code/2026/dotNet/TesteDotNet/obj/Debug/net10.0/TesteDotNet.dll
+/Users/arthurschiller/Documents/code/2026/dotNet/TesteDotNet/obj/Debug/net10.0/refint/TesteDotNet.dll
+/Users/arthurschiller/Documents/code/2026/dotNet/TesteDotNet/obj/Debug/net10.0/TesteDotNet.pdb
+/Users/arthurschiller/Documents/code/2026/dotNet/TesteDotNet/obj/Debug/net10.0/TesteDotNet.genruntimeconfig.cache
+/Users/arthurschiller/Documents/code/2026/dotNet/TesteDotNet/obj/Debug/net10.0/ref/TesteDotNet.dll
