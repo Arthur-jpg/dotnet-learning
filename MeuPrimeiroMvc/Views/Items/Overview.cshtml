@@ -1,6 +1,15 @@
 @model MeuPrimeiroMvc.Models.Item
 
 @{
+    var message = "Hello World";    
+    var items = new List<string> { "Item1", "Item2", "Item3" };
 }
 
 <p>This is the name of the item @Model.Name</p>
+<h1>@message</h1>
+
+<ul>
+    @foreach (var item in items)
+    {
+        <li>@item</li>
+    }
