@@ -1,0 +1,20 @@
+@model MeuPrimeiroMvc.Models.Item
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h3>Create an item</h3>
+
+<form asp-action="Create" method="post">
+    <div class="from-group">
+        <label for="Name">Name</label>
+        <input type="text" asp-for="Name" class="form-control" />
+    </div>
+    <div class="from-group">
+        <label for="Price">Price</label>
+        <input type="number" asp-for="Price" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-primary">Create</button>
+
+</form>

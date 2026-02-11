@@ -1,0 +1,16 @@
+@model MeuPrimeiroMvc.Models.Item
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h3>Delete an item</h3>
+
+<p>Are you sure you want to delete this item?</p>
+
+<p>Name: @Model.Name</p>
+<p>Price: @Model.Price</p>
+
+<form asp-action="Delete" method="post">
+    <input type="hidden" asp-for="Id" />
+    <button type="submit" class="btn btn-danger">Delete</button>
+</form>
