@@ -1,4 +1,10 @@
+using Microsoft.EntityFrameworkCore;
+using MeuPrimeiroMvc.Data;
+
+
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddDbContext<MeuPrimeiroMvcContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("MeuPrimeiroMvcContext")));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
