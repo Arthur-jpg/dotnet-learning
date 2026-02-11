@@ -3,13 +3,32 @@
 @{
     var message = "Hello World";    
     var items = new List<string> { "Item1", "Item2", "Item3" };
+    var isLoggedIn = true;
 }
 
 <p>This is the name of the item @Model.Name</p>
 <h1>@message</h1>
 
-<ul>
-    @foreach (var item in items)
-    {
-        <li>@item</li>
-    }
+@if (isLoggedIn)
+{
+    <p>Welcome back, user! You can see your items below:</p>
+
+    <ul>
+        @foreach (var item in items)
+        {
+            <li>@item</li>
+        }
+    </ul>
+}
+else 
+{
+    <p>Please log in to see your items.</p>
+}
+
+<form asp-action="Submit">
+    <div>
+        <input asp-for="Name" />
+        <button type="submit">Submit</button>
+        // o asp-for binds the input field to the name property os the model
+    </div>
+</form>
