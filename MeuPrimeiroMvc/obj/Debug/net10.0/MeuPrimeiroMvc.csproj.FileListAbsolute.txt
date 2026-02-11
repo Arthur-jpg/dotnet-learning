@@ -95,3 +95,4 @@
 /Users/arthurschiller/Documents/code/2026/dotNet/MeuPrimeiroMvc/obj/Debug/net10.0/MeuPrimeiroMvc.pdb
 /Users/arthurschiller/Documents/code/2026/dotNet/MeuPrimeiroMvc/obj/Debug/net10.0/MeuPrimeiroMvc.genruntimeconfig.cache
 /Users/arthurschiller/Documents/code/2026/dotNet/MeuPrimeiroMvc/obj/Debug/net10.0/ref/MeuPrimeiroMvc.dll
+/Users/arthurschiller/Documents/code/2026/dotNet/MeuPrimeiroMvc/obj/Debug/net10.0/MeuPrimeiroMvc.sourcelink.json
