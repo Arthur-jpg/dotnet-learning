@@ -14,6 +14,16 @@ namespace MeuPrimeiroMvc.Data
         // sobrescrevendo um método para popular o banco de dados com um item
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<ItemClient>().HasKey(ic => new { ic.ItemId, ic.ClientId });
+            
+            modelBuilder.Entity<ItemClient>().HasOne(ic => ic.Item)
+                .WithMany(i => i.ItemClients)
+                .HasForeignKey(ic => ic.ItemId);
+
+            modelBuilder.Entity<ItemClient>().HasOne(ic => ic.Client)
+                .WithMany(c => c.ItemClients)
+                .HasForeignKey(ic => ic.ClientId);
+
             modelBuilder.Entity<Item>().HasData(
                 new Item { Id=5, Name="Microphone", Price=100.0, SerialNumberId=10 }
             );
@@ -31,6 +41,9 @@ namespace MeuPrimeiroMvc.Data
         public DbSet<Item> Items { get; set; }
         public DbSet<SerialNumber> SerialNumbers { get; set; }
         public DbSet<Category> Categories { get; set; }
+
+        public DbSet<Client> Clients { get; set; }
+        public DbSet<ItemClient> ItemClients { get; set; }
     }
 
     // a classe context é a nossa conexão com o banco de dados

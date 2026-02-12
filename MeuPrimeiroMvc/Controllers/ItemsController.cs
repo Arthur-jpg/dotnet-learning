@@ -39,7 +39,7 @@ namespace MeuPrimeiroMvc.Controllers
         {
             // pega os dados e só passa pra view depois que tiver concluido
             var item = await _context.Items.Include(i => i.SerialNumber)
-            .Include(i => i.Category).ToListAsync();
+            .Include(i => i.Category).Include(i => i.ItemClients).ThenInclude(ic => ic.Client).ToListAsync();
 
             return View(item);
         }
