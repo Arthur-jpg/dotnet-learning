@@ -15,6 +15,10 @@
         <label for="Price">Price</label>
         <input type="number" asp-for="Price" class="form-control" />
     </div>
+        <div class="from-group">
+        <label for="CategoryId">Category</label>
+        <select asp-for="CategoryId" class="form-control" asp-items="ViewBag.Categories"></select>
+    </div>
     <button type="submit" class="btn btn-primary">Create</button>
 
 </form>

@@ -4,6 +4,7 @@ using MeuPrimeiroMvc.Data;
 using Microsoft.EntityFrameworkCore;
 using System.Runtime.CompilerServices;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 
 namespace MeuPrimeiroMvc.Controllers
@@ -37,16 +38,18 @@ namespace MeuPrimeiroMvc.Controllers
         public async Task<IActionResult> Index()
         {
             // pega os dados e só passa pra view depois que tiver concluido
-            var item = await _context.Items.Include(i => i.SerialNumber).ToListAsync();
+            var item = await _context.Items.Include(i => i.SerialNumber)
+            .Include(i => i.Category).ToListAsync();
 
             return View(item);
         }
         public IActionResult Create()
         {
+            ViewData["Categories"] = new SelectList(_context.Categories, "Id", "Name");
             return View();
         }
         [HttpPost]
-        public async Task<IActionResult> Create([Bind("Id, Name, Price")] Item item)
+        public async Task<IActionResult> Create([Bind("Id, Name, Price, CategoryId")] Item item)
         {
             if(ModelState.IsValid)
             {
@@ -63,11 +66,12 @@ namespace MeuPrimeiroMvc.Controllers
         public async Task<IActionResult> Edit(int id)
         {
             var item = await _context.Items.FirstOrDefaultAsync(m => m.Id == id);
+            ViewData["Categories"] = new SelectList(_context.Categories, "Id", "Name", item?.CategoryId);
             return View(item);
         }
 
         [HttpPost]
-        public async Task<IActionResult> Edit(int id, [Bind("Id, Name, Price")] Item item)
+        public async Task<IActionResult> Edit(int id, [Bind("Id, Name, Price, CategoryId")] Item item)
         {
             if(ModelState.IsValid)
             {
