@@ -3,6 +3,7 @@ using MeuPrimeiroMvc.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MeuPrimeiroMvc.Migrations
 {
     [DbContext(typeof(MeuPrimeiroMvcContext))]
-    partial class MeuPrimeiroMvcContextModelSnapshot : ModelSnapshot
+    [Migration("20260212140813_SerialNumber")]
+    partial class SerialNumber
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

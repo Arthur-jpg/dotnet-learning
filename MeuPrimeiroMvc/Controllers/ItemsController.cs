@@ -37,7 +37,7 @@ namespace MeuPrimeiroMvc.Controllers
         public async Task<IActionResult> Index()
         {
             // pega os dados e só passa pra view depois que tiver concluido
-            var item = await _context.Items.ToListAsync();
+            var item = await _context.Items.Include(i => i.SerialNumber).ToListAsync();
 
             return View(item);
         }
